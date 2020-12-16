@@ -6,11 +6,15 @@
 #include <list>
 #include <vector>
 
-std::vector< char > foo(std::list< Human >& people)
+
+using namespace std;
+
+vector< char > foo(list< Human >& people)
 {
-    std::vector< char > ret_v(people.size());
+  vector< char > ret_v(people.size());
 
-    // Twoja implementacja tutaj
+ for_each(people.begin(),people.end(),[](Human& a){ a.birthday();});
+ transform(people.begin(),people.end(),ret_v.rbegin(),monster){return a.isMonster()? 'n':'y';});
 
-    return ret_v;
+  return ret_v;
 }
